@@ -82,13 +82,114 @@
     left: 0;
     content: '';
 }
+
 /*Carusel*/
 .carrousel-container {     
-    background-image: url("../img/bg03.jpg");    
+    /*background-image: url("../img/bg03.jpg");*/
     height: 600px; 
+    /*background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+/* Carusel */
+/*#carousel div {
+    height: 600px;
+    float: left;
+}
+#carousel img {
+    min-width: 100%;
+    min-height: 100%;
+}*/
+.carousel__item {
+    height: 600px;             
+}
+.carousel__item--image1 {
+    background: url(../img/backgrounds/naxxramas-1920x1200.jpg);    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.carousel__item--image2 {
+    background: url(../img/backgrounds/wall1-1920x1200.jpg);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel__item--image3 {
+    background: url(../img/backgrounds/world-of-warcraft-alliance.jpg);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel__item--image4 {
+    background: url(../img/backgrounds/tcg26-2560x1440-wide.jpg);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#title {
+    text-align: center;
+    width: 100%;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+}
+#title h3 {
+    text-shadow: 
+        0 3px 3px rgba( 0, 0, 0, 0.3 ),
+        0 -3px 3px rgba( 0, 0, 0, 0.3 ),
+        3px 0 3px rgba( 0, 0, 0, 0.3 ),
+        -3px 0 3px rgba( 0, 0, 0, 0.3 );
+ 
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #fff;
+    margin: 0;
+}
+#title a {
+    color: #fff;
+}
+#title a:hover {
+    background: rgba( 0, 0, 0, 0.5 );
+    padding: 2px 5px;
+}
+.pager {
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-topright: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #fff;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    padding-top: 2px;
+    margin: 0 0 0 -60px;
+    position: relative;
+    bottom: 32px;
+    left: 50%;
+    z-index: 99999;
+}
+
+.pager a.selected span {
+    background: #666;
+}
+.pager a {
+    display: inline-block;
+    padding: 5px;
+}
+.pager span {
+    border-radius: 10px;
+    background: #ccc;
+    text-indent: -100px;
+    line-height: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
 }
 .first-pane:before {
     content: '';
@@ -150,158 +251,3 @@
         background-color: #000
     }
 }
-/*.custom-menu-wrapper {
-    background-color: #808080;
-    margin-bottom: 2.5em;
-    white-space: nowrap;
-    position: relative;
-}
-
-.custom-menu {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-}
-
-.custom-menu .pure-menu-link,
-.custom-menu .pure-menu-heading {
-    color: white;
-}
-
-.custom-menu .pure-menu-link:hover,
-.custom-menu .pure-menu-heading:hover {
-    background-color: transparent;
-}
-
-.custom-menu-top {
-    position: relative;
-    padding-top: .5em;
-    padding-bottom: .5em;
-}
-
-.custom-menu-brand {
-    display: block;
-    text-align: center;    
-}
-
-.custom-menu-toggle {
-    width: 44px;
-    height: 44px;
-    display: block;
-    position: absolute;
-    top: 3px;
-    right: 0;
-    display: none;
-}
-.burger {
-    padding: 20px 34px 20px 10px;
-    cursor: pointer;
-}
-.custom-menu-toggle .burger__icon, .custom-menu-toggle .burger__icon::before, .custom-menu-toggle .burger__icon::after {
-    position: absolute;
-    display: block;
-    background-color: #000;
-    width: 24px;
-    height: 3px;
-    transition: all .2s 0s ease-out;
-  }
-.custom-menu-toggle .bar {
-    background-color: white;
-    display: block;
-    width: 20px;
-    height: 2px;
-    border-radius: 100px;
-    position: absolute;
-    top: 22px;
-    right: 12px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.custom-menu-toggle .bar:first-child {
-    -webkit-transform: translateY(-6px);
-    -moz-transform: translateY(-6px);
-    -ms-transform: translateY(-6px);
-    transform: translateY(-6px);
-}
-
-.custom-menu-toggle.x .bar {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.custom-menu-toggle.x .bar:first-child {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.custom-menu-screen {
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
-    height: 3em;
-    width: 70em;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
-
-.custom-menu-tucked .custom-menu-screen {
-    -webkit-transform: translateY(-44px);
-    -moz-transform: translateY(-44px);
-    -ms-transform: translateY(-44px);
-    transform: translateY(-44px);
-}
-
-@media (max-width: 62em) {
-
-    .custom-menu {
-        display: block;
-    }
-    
-    .custom-menu-bottom {
-        position: absolute;
-        width: 100%;
-        border-top: 1px solid #eee;
-        background-color: #808080\9;
-        z-index: 100;
-    }
-
-    .custom-menu-bottom .pure-menu-link {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -ms-transition: all 0.5s;
-        transition: all 0.5s;
-    }
-
-    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
-        -webkit-transform: translateX(-140px);
-        -moz-transform: translateX(-140px);
-        -ms-transform: translateX(-140px);
-        transform: translateX(-140px);
-        opacity: 0;
-        opacity: 1\9;
-    }
-
-    .pure-menu-horizontal.custom-menu-tucked {
-        z-index: -1;
-        top: 45px;
-        position: absolute;
-        overflow: hidden;
-    }
-}
-*/

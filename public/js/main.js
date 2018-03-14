@@ -16,3 +16,21 @@
         }
     });
 })(this, this.document);
+
+$(function() {
+    $('.carousel').carouFredSel({
+        responsive: true,
+        items: {
+            visible: 1,
+            width: 900,
+            height: 600
+        },
+        scroll: {
+            duration: 500,
+            timeoutDuration: 8500,
+            fx: 'cover-fade',
+            easing: 'quadratic'
+        },
+        pagination: '.pager'
+    });
+});
